@@ -29,14 +29,29 @@ const name2 = {
 
 // console.log(printFullName);
 
-/******************** Call Method ******************/
+/***** Call Method ****/
 
 // name.printFullName.call(name2);
 
-// Call method with arguements
+// name.printFullName.call(name2, "Delhi", "Uttrakhand");   //Call method with arguements
 
-// name.printFullName.call(name2, "Delhi", "Uttrakhand");
+/***** Apply Method ****/
 
-/******************** Apply Method ******************/
+// name.printFullName.apply(name2, ["delhi", "uttrakhand"]);
 
-name.printFullName.apply(name2, ["delhi", "uttrakhand"]);
+/****** Bind Method *****/
+const person = {
+  name: "John",
+  greet: function () {
+    console.log("Hello, " + this.name);
+  },
+};
+
+const anotherPerson = {
+  name: "Jane",
+};
+
+const greetPerson = person.greet.bind(anotherPerson);
+console.log(greetPerson); // returns a function
+
+greetPerson();
