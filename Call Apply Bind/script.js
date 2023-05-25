@@ -29,6 +29,14 @@ const name2 = {
 
 // console.log(printFullName);
 
-name.printFullName.call(name2, "Delhi", "Uttrakhand");
+/******************** Call Method ******************/
+
+// name.printFullName.call(name2);
 
 // Call method with arguements
+
+// name.printFullName.call(name2, "Delhi", "Uttrakhand");
+
+/******************** Apply Method ******************/
+
+name.printFullName.apply(name2, ["delhi", "uttrakhand"]);
