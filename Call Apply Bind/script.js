@@ -3,8 +3,20 @@
 const name = {
   firstName: "Jitender",
   secondName: "Singh",
-  printFullName: function () {
-    console.log(this.firstName + " " + this.secondName);
+  printFullName: function (state, homeTown) {
+    console.log(
+      this.firstName +
+        " " +
+        this.secondName +
+        " " +
+        "state" +
+        " " +
+        state +
+        " " +
+        "hometown" +
+        " " +
+        homeTown
+    );
   },
 };
 
@@ -17,4 +29,6 @@ const name2 = {
 
 // console.log(printFullName);
 
-name.printFullName.call(name2);
+name.printFullName.call(name2, "Delhi", "Uttrakhand");
+
+// Call method with arguements
