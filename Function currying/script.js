@@ -1,11 +1,11 @@
-const add = (a, b) => {
-  console.log(a + b);
-};
+// const add = (a, b) => {
+//   console.log(a + b);
+// };
 
-// function currying with bind
+// // function currying with bind
 
-let sum = add.bind(this, 2, 3);
-console.log(sum());
+// let sum = add.bind(this, 2, 3);
+// console.log(sum());
 
 // function currying with closures
 
@@ -15,4 +15,5 @@ const multiply = (a) => {
   };
 };
 
-multiply(2, 3);
+const ans = multiply(2);
+console.log(ans(8));
