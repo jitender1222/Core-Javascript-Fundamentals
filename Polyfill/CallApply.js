@@ -35,7 +35,7 @@ const name2 = {
 Function.prototype.myapply = function (obj, args) {
   let obj1 = this;
   obj.obj1 = obj1;
-  obj.obj1(...args);
+  obj.obj1(args);
 };
 
 printFullName.myapply(name2, ["100", "9823"]);
