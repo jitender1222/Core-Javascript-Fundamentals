@@ -2,19 +2,21 @@ const div = document.getElementById("div");
 const form = document.getElementById("form");
 const button = document.getElementById("button");
 
-// event Propogation
+// event bubbling
 
-div.addEventListener("click", function () {
-  alert("div Triggered");
-});
+// div.addEventListener("click", function () {
+//   alert("div Triggered");
+// });
 
-form.addEventListener("click", function () {
-  alert("form Triggered");
-});
+// form.addEventListener("click", function () {
+//   alert("form Triggered");
+// });
 
-button.addEventListener("click", function () {
-  alert("button Triggered");
-});
+// button.addEventListener("click", function () {
+//   alert("button Triggered");
+// });
+
+// Events
 
 // event target vs this.tagName vs currentTarget
 
@@ -34,3 +36,35 @@ button.addEventListener("click", function () {
 //       this.tagName
 //   );
 // }
+
+// Event Capturing / Event Trickling
+
+div.addEventListener(
+  "click",
+  function () {
+    alert("div Triggered");
+  },
+  {
+    capture: true,
+  }
+);
+
+form.addEventListener(
+  "click",
+  function () {
+    alert("form Triggered");
+  },
+  {
+    capture: true,
+  }
+);
+
+button.addEventListener(
+  "click",
+  function () {
+    alert("button Triggered");
+  },
+  {
+    capture: true,
+  }
+);

@@ -15,3 +15,25 @@ We can understand this concept by how the bubbles form from the **bottom to top*
 **In case of the above scenario** If we click on a button first then it will be executed first then a form will be triggered and after this div should get triggered.
 
 ## What is event.target vs this.target vs event.currentTarget
+
+event.target refers to the point from were the triggering was started.
+
+For Example -> If we click on a button first then it should refer the event.current as button in every step as we move from **button to form to the div**
+
+## Output -> button -> button -> button
+
+this.tagName -> It refers to the current function .
+
+For Example -> If we click on a button first then it should refer the this.tagName as current function were it belongs to in every step as we move from **button to form to the div**
+
+## Output -> button -> form -> div
+
+event.currentTarget refers to the current point form were it is.
+
+For Example -> If we click on a button first then it should refer the event.currentTarget as button then it will target form then div in every step as we move from **button to form to the div**
+
+## Output -> button -> form -> div
+
+## Event Capturing / Trickling
+
+It is a process by which we can change the flow for the triggering element by default in case of bubbling it will go from bottom to top but after applying **capturing** it will starts moving from top to bottom
