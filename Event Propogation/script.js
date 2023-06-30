@@ -39,32 +39,47 @@ const button = document.getElementById("button");
 
 // Event Capturing / Event Trickling
 
-div.addEventListener(
-  "click",
-  function () {
-    alert("div Triggered");
-  },
-  {
-    capture: true,
-  }
-);
+// div.addEventListener(
+//   "click",
+//   function () {
+//     alert("div Triggered");
+//   },
+//   {
+//     capture: true,
+//   }
+// );
 
-form.addEventListener(
-  "click",
-  function () {
-    alert("form Triggered");
-  },
-  {
-    capture: true,
-  }
-);
+// form.addEventListener(
+//   "click",
+//   function () {
+//     alert("form Triggered");
+//   },
+//   {
+//     capture: true,
+//   }
+// );
 
-button.addEventListener(
-  "click",
-  function () {
-    alert("button Triggered");
-  },
-  {
-    capture: true,
-  }
-);
+// button.addEventListener(
+//   "click",
+//   function () {
+//     alert("button Triggered");
+//   },
+//   {
+//     capture: true,
+//   }
+// );
+
+// to stop bubbling and capturing
+
+div.addEventListener("click", function (e) {
+  alert("div Triggered");
+});
+
+form.addEventListener("click", function (e) {
+  e.stopPropagation();
+  alert("form Triggered");
+});
+
+button.addEventListener("click", function (e) {
+  alert("button Triggered");
+});

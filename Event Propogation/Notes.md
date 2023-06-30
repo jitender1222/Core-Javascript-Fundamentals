@@ -37,3 +37,5 @@ For Example -> If we click on a button first then it should refer the event.curr
 ## Event Capturing / Trickling
 
 It is a process by which we can change the flow for the triggering element by default in case of bubbling it will go from bottom to top but after applying **capturing** it will starts moving from top to bottom
+
+## Note : To stop event bubbling or capturing we can use e.stopPropogation()
