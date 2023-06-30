@@ -13,3 +13,23 @@
     padding: 10px;
     
 }
+
+#product{
+    margin-top: 20px;
+    width:600px;
+    padding: 50px;
+    border: 1px solid green;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sub-category{
+    font-size:22px;
+    background-color: rgb(212, 131, 131);
+    margin: 10px;
+    padding:40px;
+    cursor: pointer;
+}
+.sub-category:hover{
+    background-color: yellow;
+}

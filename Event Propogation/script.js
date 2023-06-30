@@ -1,6 +1,7 @@
 const div = document.getElementById("div");
 const form = document.getElementById("form");
 const button = document.getElementById("button");
+const product = document.getElementById("product");
 
 // event bubbling
 
@@ -71,15 +72,23 @@ const button = document.getElementById("button");
 
 // to stop bubbling and capturing
 
-div.addEventListener("click", function (e) {
-  alert("div Triggered");
-});
+// div.addEventListener("click", function (e) {
+//   alert("div Triggered");
+// });
 
-form.addEventListener("click", function (e) {
-  e.stopPropagation();
-  alert("form Triggered");
-});
+// form.addEventListener("click", function (e) {
+//   e.stopPropagation();
+//   alert("form Triggered");
+// });
 
-button.addEventListener("click", function (e) {
-  alert("button Triggered");
+// button.addEventListener("click", function (e) {
+//   alert("button Triggered");
+// });
+
+// event delegation
+
+product.addEventListener("click", (event) => {
+  if (event.target.tagName === "SPAN") {
+    window.location.href += "/" + event.target.id;
+  }
 });
