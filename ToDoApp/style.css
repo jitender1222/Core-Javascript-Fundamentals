@@ -27,4 +27,14 @@ body {
 
   #addedHere{
     display: flex;
+    flex-direction: column;
+  }
+
+  #edit{
+    display: none;
+  }
+
+
+  #editSubmit{
+    display: none;
   }
